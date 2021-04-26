@@ -14,7 +14,6 @@
 <body>
   <div class="container">
     <div class="bg-image">
-      <!-- <img src="../images/pizza-bg1.jpg"> -->
       <h1>WELCOME TO KNEAD PIZZA!</h1>
       <p>BRINGING YOUR TASTE BUDS TO LIFE</p>
     </div>
@@ -47,103 +46,107 @@
         </div>
       </div>
     </div>
-   <form action="#href">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Select the size of pizza you would like: </h5>
-        <div class="row">
-          <div class="col-sm-6">
-            <p class="card-text">
-            <p>
-              <label for="Small">Small</label>
-              <input type="checkbox" name="pizza-size" id="small" data-cost="500">
-            </p>
-            <p>
-              <label for="Medium">Medium</label>
-              <input type="checkbox" name="pizza-size" id="medium" data-cost="900">
-            </p>
-            <p>
-              <label for="Large">Large</label>
-              <input type="checkbox" name="pizza-size" id="large" data-cost="1200">
-            </p>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Someone bites the crust! Choose your crust: </h5>
-            <p class="card-text">
-            <p>
-              <label for="Cripsy-Crust">Cripsy Crust</label>
-              <input type="radio" name="pizza-crust" id="crispy">
-            </p>
-            <p>
-              <label for="Gluten-free-Crust">Gluten-free Crust</label>
-              <input type="radio" name="pizza-crust" id="gluten-free">
-            </p>
-            <p>
-              <label for="Garlic-stuffed-Crust">Garlic-stuffed Crust</label>
-              <input type="radio" name="pizza-crust" id="garlic-stuffed">
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Pizza doesn't get any cheddar than this! How much cheese would you like?</h5>
-            <p class="card-text">
-            <p>
-              <label for="Regular cheese">Regular Cheese</label>
-              <input type="radio" name="cheese" id="regular" data-cost="100">
-            </p>
-            <p>
-              <label for="Medium cheese">Medium Cheese</label>
-              <input type="radio" name="cheese" id="medium" data-cost="200">
-            </p>
-            <p>
-              <label for="Extra cheese">Extra loaded Cheese</label>
-              <input type="radio" name="cheese" id="extra" data-cost="300">
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Let's top it up now, shall we?</h5>
-            <p class="card-text">
-            <p>
-              <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
-              <input type="checkbox" name="toppings" id="mushrooms" data-cost="50">
-            </p>
-            <p>
-              <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
-              <input type="checkbox" name="toppings" id="pepperoni" data-cost="50">
-            </p>
-            <p>
-              <label for="Ham & pineapple">Ham & Pineapple</label>
-              <input type="checkbox" name="toppings" id="ham-pineapple" data-cost="50">
-            </p>
-            <p>
-              <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
-              <input type="checkbox" name="toppings" id="potato-bacon" data-cost="50">
-            </p>
-          </div>
-        </div>
 
-        <br><br>
-        <button type="submit">Submit here</button>   
+    <div class="section-card visible-first">
+      <header><h2>Select the size of pizza you would like: </h2></header>
 
-   </form>
-        <div>
-          <h1>Here's your order summary:</h1>
-          <p id="orderTotal"></p>
-        </div>
+      <p>
+        <label for="Small">Small</label>
+        <input type="checkbox" name="pizza-size" id="small" data-cost="500">
+      </p>
+      <p>
+        <label for="Medium">Medium</label>
+        <input type="checkbox" name="pizza-size" id="medium" data-cost="900">
+      </p>
+      <p>
+        <label for="Large">Large</label>
+        <input type="checkbox" name="pizza-size" id="large" data-cost="1200">
+      </p>
+
+      <button class="back">Back</button>
+      <button class="submit">Next</button>
+
+    </div>
+
+    <div class="section-card">
+      <header> <h2>Someone bites the crust! Choose your crust: </h2></header>
+
+      <p>
+        <label for="Cripsy-Crust">Cripsy Crust</label>
+        <input type="radio" name="pizza-crust" id="crispy">
+      </p>
+      <p>
+        <label for="Gluten-free-Crust">Gluten-free Crust</label>
+        <input type="radio" name="pizza-crust" id="gluten-free">
+      </p>
+      <p>
+        <label for="Garlic-stuffed-Crust">Garlic-stuffed Crust</label>
+        <input type="radio" name="pizza-crust" id="garlic-stuffed" data-cost="200">
+      </p>
+      <button class="back">
+        Back
+      </button>
+
+      <button class="submit">
+        Next
+      </button>
+
+    </div>
+
+    <div class="section-card">
+      <header>
+        <h2>Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
+      </header>
+
+      <p>
+        <label for="Regular cheese">Regular Cheese</label>
+        <input type="radio" name="cheese" id="regular" data-cost="100">
+      </p>
+      <p>
+        <label for="Medium cheese">Medium Cheese</label>
+        <input type="radio" name="cheese" id="medium" data-cost="200">
+      </p>
+      <p>
+        <label for="Extra cheese">Extra loaded Cheese</label>
+        <input type="radio" name="cheese" id="extra" data-cost="300">
+      </p>
+      <button class="back">Back</button>
+      <button class="submit">Next</button>
+    </div>
+
+    <div class="section-card last">
+      <header><h2>Let's top it up now, shall we?</h2></header>
+      <p>
+        <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
+        <input type="checkbox" name="toppings" id="mushrooms" data-cost="50">
+      </p>
+      <p>
+        <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
+        <input type="checkbox" name="toppings" id="pepperoni" data-cost="50">
+      </p>
+      <p>
+        <label for="Ham & pineapple">Ham & Pineapple</label>
+        <input type="checkbox" name="toppings" id="ham-pineapple" data-cost="50">
+      </p>
+      <p>
+        <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
+        <input type="checkbox" name="toppings" id="potato-bacon" data-cost="50">
+      </p>
+      <button class="back">Back</button>
+      <button class="submit">Next</button>
+    </div>
+
+    <div id="orderTotal">
+      <h1>Here's your order summary: </h1>
+    </div>
 
 
 
-      </div>
+  </div>
 
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="JS/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="JS/scripts.js"></script>
 </body>
 
 </html>
