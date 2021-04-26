@@ -1,28 +1,82 @@
-function displayOrder(e) {
-  let sizeOfPizza = document.querySelector('input[name="pizza-size"]:checked').value;
- 
-  // let crustPizza = document.querySelector("input[name="pizza-crust"]:checked").value;
-  // let cheesey = document.querySelector("input[name="cheese"]:checked").value;
-  // let veggies = document.querySelector("input[name="toppings"]:checked").value;
+$(document).ready(function (){
+  $("h2").click(function () {
+    $(".shown").show();
+  });
+});
 
-  e.preventDefault();
+function customerInvoice() {
 
-  if (sizeOfPizza=== small) {
-    document.getElementById("orderTotal").innerHTML = "Your total order is KShs 500";
-  } else if (sizeOfPizza=== medium) {
-    document.getElementById("orderTotal").innerHTML = "Your total order is KShs 900";
-  } else {
-    document.getElementById("orderTotal").innerHTML = "Your total order is KShs 1200";
-  }
-}
+  //Setting the cost of each pizza depending on the size
+  let sizeOfPizza = document.querySelector('input[name="pizza-size"]:checked').value; 
+  let sizeCost = 0;
+  if (sizeOfPizza === "small") {
+    sizeCost = 500;
+  } else if (sizeOfPizza === "medium") {
+    sizeCost = 900;
+  } else if (sizeOfPizza === "large") {
+    sizeCost = 1200;
+  }; 
+  // console.log("pizza-size=" + size);
+
+  //Setting the cost of the crust depending on the type
+  let crust = document.querySelector('input[name="pizza-crust"]:checked').value; 
+  // console.log("pizza-crust=" + crust);
+  let crustCost = 0
+  if (crust === "crispy-crust") {
+    crustCost = 100;
+  } else if (crust === "garlic-stuffed-crust") {
+    crustCost = 200;
+  } else if (crust === "gluten-free-crust") {
+    crustCost = 300;
+  }; 
+  // console.log("crustCost=" + crustCost);
+
+  //Setting the cost of the cheese depending on whether it's regular, medium or extra-loaded
+  let cheese = document.querySelector('input[name="cheese"]:checked').value; 
+  // console.log("cheese=" + cheese);
+  let cheeseCost = 0
+  if (cheese === "regular") {
+    cheeseCost = 100;
+  } else if (cheese === "medium") {
+    cheeseCost = 250;
+  } else if (cheese === "extra") {
+    cheeseCost = 300;
+  }; 
   
-//was trying to push the items selected onto an array below:
-//   let newOrder = [];
-//   $("input:checked[name="pizza-size"]:checked".each (function() {
-//     newOrder.push($(this).val());
-//   }));
-//   $("#orderTotal").text(newOrder);
-//   }));
-// })
+  // console.log("cheeseCost=" + cheeseCost);
 
-document.addEventListener("submit", displayOrder)
+  //Setting the cost of the toppings
+  let toppings = document.querySelector('input[name="toppings"]:checked').value; 
+  // console.log("toppings=" + toppings);
+  let topCost = 0
+  if (toppings === "Mixed Slice Mushrooms + Garlic") {
+    topCost = 75;
+  } else if (toppings === "Pepperoni + Black olives") {
+    topCost = 150;
+  } else if (toppings === "Ham & pineapple") {
+    topCost = 100;
+  } else if (toppings === "Potato, Sausage & Bacon") {
+    topCost = 175;
+  }; 
+  // console.log("topCost=" + topCost);
+
+  // e.preventDefault();
+
+  //Total Price to be invoiced
+  let totalCost = (sizeCost + crustCost + cheeseCost + topCost);
+  //  console.log("totalCost=" + totalCost);
+
+  //Add the price to the customer order table
+  $("#pizzasize").html(sizeOfPizza + " Pizza");
+  $("#sizecost").html("Kshs" + sizeCost + ".00");
+  $("#pizzacrust").html(crust + " Crust");
+  $("#crustcost").html("Kshs" + crustCost + ".00");
+  $("#pizzacheese").html(cheese + " Cheese");
+  $("#cheesecost").html("Kshs" + cheeseCost + ".00");
+  $("#pizzatoppings").html(toppings + " Toppings");
+  $("#toppingscost").html("Kshs" + topCost + ".00");
+  $("#totalcost").html("Kshs" + totalCost + ".00");
+
+};
+
+// document.addEventListener('submit', customerInvoice)

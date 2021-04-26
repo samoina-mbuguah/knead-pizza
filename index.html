@@ -25,7 +25,7 @@
         are here to delight your taste buds with our unique flavors of wood-fired pizza.
       </h2>
     </div>
-    <h2 class="header"><b>OUR MENU</b></h2>
+    <h2 class="title"><b>OUR MENU</b></h2>
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
@@ -47,88 +47,91 @@
       </div>
     </div>
 
-    <div class="section-card visible-first">
-      <header>
-        <h2>Select the size of pizza you would like: </h2>
-      </header>
+    <form action="#href">
+      
+        <header>
+          <h2 class="title">Select the size of pizza you would like: </h2>
+        </header>
+        <div class="shown">
+        <p>
+          <label for="Small">Small</label>
+          <input type="checkbox" name="pizza-size" id="small">
+        </p>
+        <p>
+          <label for="Medium">Medium</label>
+          <input type="checkbox" name="pizza-size" id="medium">
+        </p>
+        <p>
+          <label for="Large">Large</label>
+          <input type="checkbox" name="pizza-size" id="large">
+        </p>
 
-      <p>
-        <label for="Small">Small</label>
-        <input type="checkbox" name="pizza-size" id="small">
-      </p>
-      <p>
-        <label for="Medium">Medium</label>
-        <input type="checkbox" name="pizza-size" id="medium">
-      </p>
-      <p>
-        <label for="Large">Large</label>
-        <input type="checkbox" name="pizza-size" id="large">
-      </p>
+      </div>
 
-    </div>
+      
+        <header>
+          <h2 class="title">Someone bites the crust! Choose your crust: </h2>
+        </header>
+        <div class="shown">
+        <p>
+          <label for="cripsy-crust">Cripsy Crust</label>
+          <input type="radio" name="pizza-crust" id="crispy">
+        </p>
+        <p>
+          <label for="garlic-stuffed-crust">Garlic-stuffed Crust</label>
+          <input type="radio" name="pizza-crust" id="garlic-stuffed">
+        </p>
+        <p>
+          <label for="gluten-free-crust">Gluten-free Crust</label>
+          <input type="radio" name="pizza-crust" id="gluten-free">
+        </p>
 
-    <div class="section-card">
-      <header>
-        <h2>Someone bites the crust! Choose your crust: </h2>
-      </header>
+      </div>
 
-      <p>
-        <label for="Cripsy-Crust">Cripsy Crust</label>
-        <input type="radio" name="pizza-crust" id="crispy">
-      </p>
-      <p>
-        <label for="Gluten-free-Crust">Gluten-free Crust</label>
-        <input type="radio" name="pizza-crust" id="gluten-free">
-      </p>
-      <p>
-        <label for="Garlic-stuffed-Crust">Garlic-stuffed Crust</label>
-        <input type="radio" name="pizza-crust" id="garlic-stuffed" data-cost="200">
-      </p>
+        <header>
+          <h2 class="title">Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
+        </header>
+        <div class="shown">
+        <p>
+          <label for="Regular cheese">Regular Cheese</label>
+          <input type="radio" name="cheese" id="regular" data-cost="100">
+        </p>
+        <p>
+          <label for="Medium cheese">Medium Cheese</label>
+          <input type="radio" name="cheese" id="medium" data-cost="200">
+        </p>
+        <p>
+          <label for="Extra cheese">Extra loaded Cheese</label>
+          <input type="radio" name="cheese" id="extra" data-cost="300">
+        </p>
 
-    </div>
+      </div>
 
-    <div class="section-card">
-      <header>
-        <h2>Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
-      </header>
+        <header>
+          <h2 class="title">Let's top it up now, shall we?</h2>
+        </header>
+        <div class="shown">
+        <p>
+          <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
+          <input type="radio" name="toppings" id="mushrooms">
+        </p>
+        <p>
+          <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
+          <input type="radio" name="toppings" id="pepperoni">
+        </p>
+        <p>
+          <label for="Ham & pineapple">Ham & Pineapple</label>
+          <input type="radio" name="toppings" id="ham-pineapple">
+        </p>
+        <p>
+          <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
+          <input type="radio" name="toppings" id="potato-bacon">
+        </p>
+      </div>
+      <button id="tally" type="submit">Submit your order here.</button>
 
-      <p>
-        <label for="Regular cheese">Regular Cheese</label>
-        <input type="radio" name="cheese" id="regular" data-cost="100">
-      </p>
-      <p>
-        <label for="Medium cheese">Medium Cheese</label>
-        <input type="radio" name="cheese" id="medium" data-cost="200">
-      </p>
-      <p>
-        <label for="Extra cheese">Extra loaded Cheese</label>
-        <input type="radio" name="cheese" id="extra" data-cost="300">
-      </p>
+    </form>
 
-    </div>
-
-    <div class="section-card last">
-      <header>
-        <h2>Let's top it up now, shall we?</h2>
-      </header>
-      <p>
-        <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
-        <input type="checkbox" name="toppings" id="mushrooms">
-      </p>
-      <p>
-        <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
-        <input type="checkbox" name="toppings" id="pepperoni">
-      </p>
-      <p>
-        <label for="Ham & pineapple">Ham & Pineapple</label>
-        <input type="checkbox" name="toppings" id="ham-pineapple">
-      </p>
-      <p>
-        <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
-        <input type="checkbox" name="toppings" id="potato-bacon">
-      </p>
-    </div>
-    <button id="tally" type="submit" onclick="receipt()">Submit your order here.</button>
 
     <div id="total">
       <h1>Here's your order summary: </h1>
