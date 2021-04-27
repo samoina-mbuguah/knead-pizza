@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <div class="bg-image">
+    <div id="bg1-image">
       <h1>WELCOME TO KNEAD PIZZA!<br><br>
         BRINGING YOUR TASTE BUDS TO LIFE</h1>
     </div>
@@ -46,130 +46,135 @@
         </div>
       </div>
     </div>
+    <div id="bg2-image">
+      <div class="menu">
+        <form action="#href">
 
-    <form action="#href">
-      
-        <header>
-          <h2 class="title">Select the size of pizza you would like: </h2>
-        </header>
-        <div class="shown">
-        <p>
-          <label for="Small">Small</label>
-          <input type="checkbox" name="pizza-size" id="small">
-        </p>
-        <p>
-          <label for="Medium">Medium</label>
-          <input type="checkbox" name="pizza-size" id="medium">
-        </p>
-        <p>
-          <label for="Large">Large</label>
-          <input type="checkbox" name="pizza-size" id="large">
-        </p>
+          <header>
+            <h2 class="title">Select the size of pizza you would like: </h2>
+          </header>
+          <div class="shown">
+            <p>
+              <label for="Small">Small</label>
+              <input type="checkbox" name="pizza-size" id="small">
+            </p>
+            <p>
+              <label for="Medium">Medium</label>
+              <input type="checkbox" name="pizza-size" id="medium">
+            </p>
+            <p>
+              <label for="Large">Large</label>
+              <input type="checkbox" name="pizza-size" id="large">
+            </p>
 
+          </div>
+
+
+          <header>
+            <h2 class="title">Someone bites the crust! Choose your crust: </h2>
+          </header>
+          <div class="shown">
+            <p>
+              <label for="cripsy-crust">Cripsy Crust</label>
+              <input type="radio" name="pizza-crust" id="crispy">
+            </p>
+            <p>
+              <label for="garlic-stuffed-crust">Garlic-stuffed Crust</label>
+              <input type="radio" name="pizza-crust" id="garlic-stuffed">
+            </p>
+            <p>
+              <label for="gluten-free-crust">Gluten-free Crust</label>
+              <input type="radio" name="pizza-crust" id="gluten-free">
+            </p>
+
+          </div>
+
+          <header>
+            <h2 class="title">Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
+          </header>
+          <div class="shown">
+            <p>
+              <label for="Regular cheese">Regular Cheese</label>
+              <input type="radio" name="cheese" id="regular" data-cost="100">
+            </p>
+            <p>
+              <label for="Medium cheese">Medium Cheese</label>
+              <input type="radio" name="cheese" id="medium" data-cost="200">
+            </p>
+            <p>
+              <label for="Extra cheese">Extra loaded Cheese</label>
+              <input type="radio" name="cheese" id="extra" data-cost="300">
+            </p>
+
+          </div>
+
+          <header>
+            <h2 class="title">Let's top it up now, shall we?</h2>
+          </header>
+          <div class="shown">
+            <p>
+              <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
+              <input type="radio" name="toppings" id="mushrooms">
+            </p>
+            <p>
+              <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
+              <input type="radio" name="toppings" id="pepperoni">
+            </p>
+            <p>
+              <label for="Ham & pineapple">Ham & Pineapple</label>
+              <input type="radio" name="toppings" id="ham-pineapple">
+            </p>
+            <p>
+              <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
+              <input type="radio" name="toppings" id="potato-bacon">
+            </p>
+          </div>
+          <button type="submit">Submit your order here.</button>
+
+        </form>
+
+
+        <div id="total">
+          <h1>Here's your order summary: </h1>
+        </div>
+        <br><br>
+        <table class="pizza">
+          <thead>
+            <tr>
+              <th>Your order selection</th>
+              <th>Total Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id=pizzasize></td>
+              <td id=sizecost></td>
+            </tr>
+            <tr>
+              <td id=pizzacrust></td>
+              <td id=crustcost></td>
+            </tr>
+            <tr>
+              <td id=pizzacheese></td>
+              <td id=cheesecost></td>
+            </tr>
+            <tr>
+              <td id=pizzatoppings></td>
+              <td id=toppingscost></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>TOTAL COST</td>
+              <td id="totalcost"></td>
+            </tr>
+          </tfoot>
+
+        </table>
       </div>
 
-      
-        <header>
-          <h2 class="title">Someone bites the crust! Choose your crust: </h2>
-        </header>
-        <div class="shown">
-        <p>
-          <label for="cripsy-crust">Cripsy Crust</label>
-          <input type="radio" name="pizza-crust" id="crispy">
-        </p>
-        <p>
-          <label for="garlic-stuffed-crust">Garlic-stuffed Crust</label>
-          <input type="radio" name="pizza-crust" id="garlic-stuffed">
-        </p>
-        <p>
-          <label for="gluten-free-crust">Gluten-free Crust</label>
-          <input type="radio" name="pizza-crust" id="gluten-free">
-        </p>
-
-      </div>
-
-        <header>
-          <h2 class="title">Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
-        </header>
-        <div class="shown">
-        <p>
-          <label for="Regular cheese">Regular Cheese</label>
-          <input type="radio" name="cheese" id="regular" data-cost="100">
-        </p>
-        <p>
-          <label for="Medium cheese">Medium Cheese</label>
-          <input type="radio" name="cheese" id="medium" data-cost="200">
-        </p>
-        <p>
-          <label for="Extra cheese">Extra loaded Cheese</label>
-          <input type="radio" name="cheese" id="extra" data-cost="300">
-        </p>
-
-      </div>
-
-        <header>
-          <h2 class="title">Let's top it up now, shall we?</h2>
-        </header>
-        <div class="shown">
-        <p>
-          <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
-          <input type="radio" name="toppings" id="mushrooms">
-        </p>
-        <p>
-          <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
-          <input type="radio" name="toppings" id="pepperoni">
-        </p>
-        <p>
-          <label for="Ham & pineapple">Ham & Pineapple</label>
-          <input type="radio" name="toppings" id="ham-pineapple">
-        </p>
-        <p>
-          <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
-          <input type="radio" name="toppings" id="potato-bacon">
-        </p>
-      </div>
-      <button type="submit">Submit your order here.</button>
-
-    </form>
-
-
-    <div id="total">
-      <h1>Here's your order summary: </h1>
     </div>
-    <br><br>
-    <table class="pizza">
-      <thead>
-        <tr>
-          <th>Your order selection</th>
-          <th>Total Cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id=pizzasize></td>
-          <td id=sizecost></td>
-        </tr>
-        <tr>
-          <td id=pizzacrust></td>
-          <td id=crustcost></td>
-        </tr>
-        <tr>
-          <td id=pizzacheese></td>
-          <td id=cheesecost></td>
-        </tr>
-        <tr>
-          <td id=pizzatoppings></td>
-          <td id=toppingscost></td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>TOTAL COST</td>
-          <td id="totalcost"></td>
-        </tr>
-      </tfoot>
 
-    </table>
 
   </div>
 
