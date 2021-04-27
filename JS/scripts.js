@@ -4,19 +4,22 @@ $(document).ready(function (){
   });
 });
 
-function customerInvoice() {
+function customerReceipt(e) {
 
-  //Setting the cost of each pizza depending on the size
-  let sizeOfPizza = document.querySelector('input[name="pizza-size"]:checked').value; 
-  let sizeCost = 0;
+  //Declare the cost of each pizza depending on the size
+ var sizeOfPizza = document.querySelector('input[name="pizza-size"]:checked').value; 
+ console.log("sizeOfPizza="+sizeOfPizza);
+  var sizeCost = 0;
   if (sizeOfPizza === "small") {
     sizeCost = 500;
-  } else if (sizeOfPizza === "medium") {
+  }; 
+  if (sizeOfPizza === "medium") {
     sizeCost = 900;
-  } else if (sizeOfPizza === "large") {
+  }; 
+  if (sizeOfPizza === "large") {
     sizeCost = 1200;
   }; 
-  // console.log("pizza-size=" + size);
+  console.log("sizeCost="+sizeCost);
 
   //Setting the cost of the crust depending on the type
   let crust = document.querySelector('input[name="pizza-crust"]:checked').value; 
@@ -58,9 +61,10 @@ function customerInvoice() {
   } else if (toppings === "Potato, Sausage & Bacon") {
     topCost = 175;
   }; 
+  
   // console.log("topCost=" + topCost);
 
-  // e.preventDefault();
+  e.preventDefault();
 
   //Total Price to be invoiced
   let totalCost = (sizeCost + crustCost + cheeseCost + topCost);
@@ -79,4 +83,4 @@ function customerInvoice() {
 
 };
 
-// document.addEventListener('submit', customerInvoice)
+document.addEventListener('submit', customerReceipt)
