@@ -7,8 +7,9 @@ $(document).ready(function (){
 function customerReceipt(e) {
 
   //Declare the cost of each pizza depending on the size
- var sizeOfPizza = document.querySelector('input[name="pizza-size"]:checked').value; 
- console.log("sizeOfPizza="+sizeOfPizza);
+  
+ var sizeOfPizza = $('input[name="pizza-size"]:checked').val(); 
+ console.log("sizeOfPizza="+sizeOfPizza)
   var sizeCost = 0;
   if (sizeOfPizza === "small") {
     sizeCost = 500;
@@ -22,8 +23,8 @@ function customerReceipt(e) {
   console.log("sizeCost="+sizeCost);
 
   //Setting the cost of the crust depending on the type
-  let crust = document.querySelector('input[name="pizza-crust"]:checked').value; 
-  // console.log("pizza-crust=" + crust);
+  let crust = $('input[name="pizza-crust"]:checked').val(); 
+  console.log(crust);
   let crustCost = 0
   if (crust === "crispy-crust") {
     crustCost = 100;
@@ -32,11 +33,11 @@ function customerReceipt(e) {
   } else if (crust === "gluten-free-crust") {
     crustCost = 300;
   }; 
-  // console.log("crustCost=" + crustCost);
+  console.log("crustCost=" + crustCost);
 
   //Setting the cost of the cheese depending on whether it's regular, medium or extra-loaded
-  let cheese = document.querySelector('input[name="cheese"]:checked').value; 
-  // console.log("cheese=" + cheese);
+  let cheese = $('input[name="cheese"]:checked').val(); 
+  console.log("cheese=" + cheese);
   let cheeseCost = 0
   if (cheese === "regular") {
     cheeseCost = 100;
@@ -45,12 +46,11 @@ function customerReceipt(e) {
   } else if (cheese === "extra") {
     cheeseCost = 300;
   }; 
-  
-  // console.log("cheeseCost=" + cheeseCost);
+  console.log("cheeseCost=" + cheeseCost);
 
   //Setting the cost of the toppings
-  let toppings = document.querySelector('input[name="toppings"]:checked').value; 
-  // console.log("toppings=" + toppings);
+  let toppings = $('input[name="toppings"]:checked').val(); 
+  console.log("toppings=" + toppings);
   let topCost = 0
   if (toppings === "Mixed Slice Mushrooms + Garlic") {
     topCost = 75;
@@ -62,13 +62,13 @@ function customerReceipt(e) {
     topCost = 175;
   }; 
   
-  // console.log("topCost=" + topCost);
+  console.log("topCost=" + topCost);
 
   e.preventDefault();
 
   //Total Price to be invoiced
   let totalCost = (sizeCost + crustCost + cheeseCost + topCost);
-  //  console.log("totalCost=" + totalCost);
+   console.log("totalCost=" + totalCost);
 
   //Add the price to the customer order table
   $("#pizzasize").html(sizeOfPizza + " Pizza");
