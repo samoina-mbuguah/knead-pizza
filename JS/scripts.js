@@ -65,22 +65,22 @@ function checkButton() {
 
   console.log("topCost=" + topCost);
 
-  //   var delivery = document.querySelector('input[[name="delivery"]:checked');
-  //   console.log(delivery.value);
-  //   var deliveryCost = 0
-  //   if (delivery.value === "Yes") {
-  //     prompt("Please enter your location: ");
-  //     alert("Your pizza will be delivered to your location :)")
-  //     deliveryCost = 250;
-  //   } else if (delivery.value === "No") {
-  //     alert("Time for some yum! Your pizza will eb ready in the next hour.")
-  //   }
-  // }
+  var delivery = document.querySelector('input[name="delivery"]:checked');
+  console.log(delivery.value);
+
+  var deliveryCost = 0
+  if (delivery.value === "Yes") {
+    prompt("Please enter your location: ");
+    alert("Your pizza will be delivered to your location :)")
+    deliveryCost = 250;
+  } else if (delivery.value === "No") {
+    alert("Time for some yum! Your pizza will be ready in the next hour.")
+  }
 
   // e.preventDefault();
 
   //Total Price to be invoiced
-  let totalCost = (sizeCost + crustCost + cheeseCost + topCost);
+  let totalCost = (sizeCost + crustCost + cheeseCost + topCost + deliveryCost);
   console.log("totalCost=" + totalCost);
 
   //Add the price to the customer order table
@@ -92,6 +92,9 @@ function checkButton() {
   $("#cheesecost").html("Kshs" + cheeseCost + ".00");
   $("#pizzatoppings").html(toppings.value + " Toppings");
   $("#toppingscost").html("Kshs" + topCost + ".00");
+  $("#pizzadelivery").html(delivery.value + ",for delivery");
+  $("#deliverycost").html("Kshs" + deliveryCost + ".00");
+  
   $("#totalcost").html("Kshs" + totalCost + ".00");
 
 };
