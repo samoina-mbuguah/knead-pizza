@@ -1,12 +1,14 @@
+
+
 $(document).ready(function () {
-  $("h2").click(function () {
+  $("h3").click(function () {
     $(".shown").show();
   });
 });
 
 //Remember to check the value with .value against that which is in the HTML
 //Set the cost of the pizza
-function checkButton() {
+function checkButton(e) {
   var sizeOfPizza = document.querySelector('input[name="size"]:checked');
   console.log(sizeOfPizza.value + " pizza");
   var sizeCost = 0;
@@ -71,13 +73,13 @@ function checkButton() {
   var deliveryCost = 0
   if (delivery.value === "Yes") {
     prompt("Please enter your location: ");
-    alert("Your pizza will be delivered to your location :)")
+    alert("Your pizza will be delivered to your location, at a flat rate of Kshs 250 :)")
     deliveryCost = 250;
   } else if (delivery.value === "No") {
     alert("Time for some yum! Your pizza will be ready in the next hour.")
   }
 
-  // e.preventDefault();
+ 
 
   //Total Price to be invoiced
   let totalCost = (sizeCost + crustCost + cheeseCost + topCost + deliveryCost);
@@ -97,4 +99,8 @@ function checkButton() {
   
   $("#totalcost").html("Kshs" + totalCost + ".00");
 
+  e.preventDefault();
+
 };
+
+document.addEventListener('onclick', checkButton);
