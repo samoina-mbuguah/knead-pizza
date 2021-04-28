@@ -56,16 +56,18 @@
           <div class="shown">
             <p>
               <label for="Small">Small</label>
-              <input type="checkbox" name="pizza-size" id="small">
+              <input type="radio" name="size" id="small" value="Small">
             </p>
             <p>
               <label for="Medium">Medium</label>
-              <input type="checkbox" name="pizza-size" id="medium">
+              <input type="radio" name="size" id="medium" value="Medium">
             </p>
             <p>
               <label for="Large">Large</label>
-              <input type="checkbox" name="pizza-size" id="large">
+              <input type="radio" name="size" id="large" value="Large">
             </p>
+            <h3 id="display"></h3>
+            <h3 id="error"></h3>
 
           </div>
 
@@ -75,35 +77,35 @@
           </header>
           <div class="shown">
             <p>
-              <label for="cripsy-crust">Cripsy Crust</label>
-              <input type="radio" name="pizza-crust" id="crispy">
+              <label for="crispy-crust">Crispy Crust</label>
+              <input type="radio" name="pizza-crust" id="crispy" value="Crispy">
             </p>
             <p>
               <label for="garlic-stuffed-crust">Garlic-stuffed Crust</label>
-              <input type="radio" name="pizza-crust" id="garlic-stuffed">
+              <input type="radio" name="pizza-crust" id="garlic-stuffed" value="Garlic-stuffed">
             </p>
             <p>
               <label for="gluten-free-crust">Gluten-free Crust</label>
-              <input type="radio" name="pizza-crust" id="gluten-free">
+              <input type="radio" name="pizza-crust" id="gluten-free" value="Gluten-free">
             </p>
 
           </div>
 
-          <header>
+     <header>
             <h2 class="title">Pizza doesn't get any cheddar than this! How much cheese would you like?</h2>
           </header>
           <div class="shown">
             <p>
               <label for="Regular cheese">Regular Cheese</label>
-              <input type="radio" name="cheese" id="regular">
+              <input type="radio" name="cheese" id="regular" value="Regular">
             </p>
             <p>
               <label for="Medium cheese">Medium Cheese</label>
-              <input type="radio" name="cheese" id="medium">
+              <input type="radio" name="cheese" id="medium" value="Medium">
             </p>
             <p>
               <label for="Extra cheese">Extra loaded Cheese</label>
-              <input type="radio" name="cheese" id="extra">
+              <input type="radio" name="cheese" id="extra" value="Extra">
             </p>
 
           </div>
@@ -114,22 +116,36 @@
           <div class="shown">
             <p>
               <label for="Mixed Slice Mushrooms + Garlic">Mixed Slice Mushroom</label>
-              <input type="radio" name="toppings" id="mushrooms">
+              <input type="radio" name="toppings" value="Mushrooms">
             </p>
             <p>
               <label for="Pepperoni + Black olives">Pepperoni + Black olives</label>
-              <input type="radio" name="toppings" id="pepperoni">
+              <input type="radio" name="toppings" value="Pepperoni">
             </p>
             <p>
               <label for="Ham & pineapple">Ham & Pineapple</label>
-              <input type="radio" name="toppings" id="ham-pineapple">
+              <input type="radio" name="toppings" value="Ham-pineapple">
             </p>
             <p>
               <label for="Potato, Sausage & Bacon">Potato, Sausage & Bacon</label>
-              <input type="radio" name="toppings" id="potato-bacon">
+              <input type="radio" name="toppings" value="Potato-bacon">
             </p>
-          </div>
-          <button type="submit">Submit your order here.</button>
+          </div> 
+
+          <!-- <header>
+            <h2 class="title">Would you like your pizza delivered?</h2>
+          </header>
+          <div class="shown">
+            <p>
+              <label for="Yes">I would like to have my pizza delivered.</label>
+              <input type="radio" name="delivery" value="Yes">
+            </p>
+            <p>
+              <label for="No">No, thank you. I will pick it myself.</label>
+              <input type="radio" name="delivery" value="No">
+            </p>
+          </div>  -->
+          <button type="button" onclick=" checkButton()">Submit your order here.</button>
 
         </form>
 
